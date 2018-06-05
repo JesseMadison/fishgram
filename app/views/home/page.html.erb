@@ -1,0 +1,35 @@
+<div class="jumbotron">
+  <h1>Hello, world!</h1>
+  <p>...</p>
+  <%= link_to 'Create Profile', new_profile_path, class: "btn btn-danger btn-lg"%>
+  <br>
+  <br>
+    <%= link_to 'Create Post', new_post_path, class: "btn btn-danger btn-lg"%>
+    <br>
+  <%= link_to 'sign out', destroy_user_session_path, method: :delete %>
+
+</div>
+<% @blogs.each do |blog| %>
+  <h1><%= blog.status %></h1>
+  <% if current_user %>
+    <%= link_to like_blog_path(blog), method: :put do %>
+      <% if current_user.voted_as_when_voted_for(blog) == true %>
+      <i class="far fa-thumbs-up"></i>
+      <%= "unlike" %>
+      <% else %>
+      <i class="fas fa-thumbs-up"></i>
+      <%= "like" %>
+<% end %>
+    <% end %>
+    <% else %>
+      <%= "like" %>
+    <% end %>
+  <%= blog.votes_for.size %>
+  <p>date: <%= blog.created_at.strftime("%d %h") %></p>
+  <p><%= image_tag(blog.profile.picture_url, :size => "50x50", class: "profile-pic") %></p>
+  <p>by <%= link_to blog.profile.name %></p>
+  <p>city: <%= blog.profile.location %></p>
+  <p><%= image_tag blog.attachments.first.image_url %></p>
+  <p>comment</p>
+  <br><br>
+<% end %>

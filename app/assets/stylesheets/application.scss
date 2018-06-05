@@ -1,0 +1,23 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+.jumbotron {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    color: white;
+    background-color: black;
+}
+
+.profile-pic {
+  border-radius: 50%;
+}
+
+.like:hover {
+  color: purple;
+}
+
+.like:active {
+  color: red;
+}
