@@ -62,7 +62,6 @@ class BlogsController < ApplicationController
     end
   end
 
-
   def vote
     case current_user.voted_as_when_voted_for(@blog)
     when nil
@@ -72,7 +71,7 @@ class BlogsController < ApplicationController
     when false
       @blog.upvote_by current_user
     end
-    redirect_to root_path
+    redirect_to root_path(anchor: @blog.id)
   end
 
   private
