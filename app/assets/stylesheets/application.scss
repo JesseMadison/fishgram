@@ -1,6 +1,5 @@
-@import "bootstrap-sprockets";
+// Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
-
 
 .jumbotron {
     padding-top: 30px;
@@ -12,12 +11,4 @@
 
 .profile-pic {
   border-radius: 50%;
-}
-
-.like:hover {
-  color: purple;
-}
-
-.like:active {
-  color: red;
 }
