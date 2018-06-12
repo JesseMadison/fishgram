@@ -1,30 +1,69 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
 
+body {
+  background-color: #e6e6e6;
+}
+
 .jumbotron {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    margin-bottom: 30px;
-    color: white;
-    background-color: black;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  color: white;
+  background-color: black;
 }
 
 .profile-pic {
   border-radius: 50%;
 }
 
+.navbar {
+  padding: 0rem 11rem;
+}
+.logo-img{
+  font-size: 2em;
+}
+.nav-item {
+  margin-left: 1rem;
+}
+.mr-auto, .mx-auto {
+    margin: auto 0 auto auto !important;
+}
+
+.navicon {
+   font-size: 1.5em;
+}
+
+.fa-heart, .fa-comment {
+  font-size: 1.5em;
+}
 .post {
+  background-color: white;
   width: 60%;
-  border: 1px solid black;
+  border: 1px solid #efefef;
   border-radius: 1%;
-  margin-bottom: 20%;
-  padding: 20px;
+  margin-top: 6%;
+}
+
+.top {
+  margin: 20px 10px 10px;
+}
+
+.btm {
+  margin: 10px 10px 20px;
 }
 
 .photo {
   width: 100%;
 }
- .title {
-   font-size: 20px;
-   margin: 10px;
- }
+.title {
+  font-size: 20px;
+  margin: 10px;
+}
+
+.navbar {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  width: 100%;
+}
