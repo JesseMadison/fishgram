@@ -18,7 +18,7 @@ body {
 }
 
 .navbar {
-  padding: 0rem 11rem;
+  padding: 0rem 16%;
 }
 .logo-img{
   font-size: 2em;
@@ -30,19 +30,24 @@ body {
     margin: auto 0 auto auto !important;
 }
 
-.navicon {
-   font-size: 1.5em;
+.navicon:hover {
+  color: blue;
 }
-
 .fa-heart, .fa-comment {
   font-size: 1.5em;
 }
+
+.navicon {
+   font-size: 15px;
+}
+
 .post {
   background-color: white;
-  width: 60%;
+  width: 50%;
   border: 1px solid #efefef;
   border-radius: 1%;
-  margin-top: 6%;
+  margin-top: 8%;
+  margin-left: 4.5rem;
 }
 
 .top {

@@ -21,10 +21,12 @@
         <a class="nav-link" href="#"><i class="far fa-compass navicon"></i></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"><i class="far fa-heart navicon"></i></a>
+        <a class="nav-link" href=""><i class="far fa-heart navicon"></i></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"><i class="far fa-user navicon"></i></a>
+        <%= link_to destroy_user_session_path, class: "nav-link", :title => "Log Out", method: :delete do %>
+         <i class="far fa-user navicon" ></i>
+        <% end %>
       </li>
     </ul>
     <!-- </div> -->

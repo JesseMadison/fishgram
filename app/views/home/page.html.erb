@@ -4,8 +4,6 @@
     <div class="top">
       <%= image_tag(blog.profile.picture_url, :size => "50x50", class: "profile-pic") %>
       <%= link_to blog.profile.name %>
-      <h1><%= blog.status %></h1>
-      <p><%= blog.profile.location %></p>
     </div>
     <%= image_tag blog.attachments.first.image_url, class: "photo" %>
     <div class="btm">
@@ -29,6 +27,8 @@
       <% else %>
         <%= blog.votes_for.size %> <%= " likes" %>
       <% end %>
+      <h1><%= blog.status %></h1>
+      <p><%= blog.profile.location %></p>
     </div>
   </div>
 <% end %>
