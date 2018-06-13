@@ -13,6 +13,10 @@ body {
   background-color: black;
 }
 
+.page {
+  margin: 0 30px;
+}
+
 .profile-pic {
   border-radius: 50%;
 }
@@ -41,21 +45,43 @@ body {
    font-size: 15px;
 }
 
-.post {
-  background-color: white;
-  width: 50%;
-  border: 1px solid #efefef;
-  border-radius: 1%;
-  margin-top: 8%;
-  margin-left: 4.5rem;
+.newsfeed{
+  float: left;
+  margin-right: auto;
+  max-width: 614px;
+  width: 100%;
+  padding-top: 35px;
+  // margin-left: 4.5rem;
 }
 
+.post {
+  background-color: white;
+  // width: 50%;
+  border: 1px solid #efefef;
+  border-radius: 1%;
+  margin-top: 25px;
+}
 .top {
   margin: 20px 10px 10px;
 }
 
 .btm {
   margin: 10px 10px 20px;
+}
+
+.followers {
+  height: 100%;
+  margin-bottom: 30px;
+  padding: 15px;
+  margin-top: 60px;
+  max-width: 400px;
+  right: 0;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #efefef;
+  border-radius: 1%;
+
+  // margin-left: 4.5rem;
 }
 
 .photo {

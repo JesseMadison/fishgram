@@ -1,0 +1,35 @@
+<div class="newsfeed">
+<% @blogs.each do |blog| %>
+  <div id="<%= blog.id %>" class="post">
+    <div class="top">
+      <%= image_tag(blog.profile.picture_url, :size => "50x50", class: "profile-pic") %>
+      <%= link_to blog.profile.name %>
+    </div>
+    <%= image_tag blog.attachments.first.image_url, class: "photo" %>
+    <div class="btm">
+      <p><%= blog.created_at.strftime("%d %h") %></p>
+      <% if current_user %>
+        <%= link_to like_blog_path(blog), method: :put do %>
+          <% if current_user.voted_as_when_voted_for(blog) == true %>
+            <i class="fas fa-heart"></i>
+          <% else %>
+            <i class="far fa-heart"></i>
+          <% end %>
+        <% end %>
+      <% else %>
+        <i class="far fa-heart"></i>
+      <% end %>
+      <%= link_to do %>
+        <i class="far fa-comment"></i></p>
+      <% end %>
+      <% if blog.votes_for.size == 1 %>
+        <%= blog.votes_for.size %> <%=" like" %>
+      <% else %>
+        <%= blog.votes_for.size %> <%= " likes" %>
+      <% end %>
+      <h1><%= blog.status %></h1>
+      <p><%= blog.profile.location %></p>
+    </div>
+  </div>
+<% end %>
+</div>
